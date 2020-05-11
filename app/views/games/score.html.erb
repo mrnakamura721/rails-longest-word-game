@@ -1,5 +1,10 @@
 <div id="result">
   <h1>Result</h1>
-  <h2><%= @play_game%></h2>
+  <ol>
+      <% @letters_array.each do |letter| %>
+      <li class="btn btn-warning"><%=letter%></li>
+      <% end %>
+  </ol>
+  <p><%= @play_game%></p>
   <%= link_to "Play again", new_path %>
 </div>

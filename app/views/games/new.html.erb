@@ -1,7 +1,11 @@
 <div id="newgame">
   <form action="/score" method="post">
     <h1>New game</h1>
-    <h2><%= @letters%></h2>
+    <ol>
+        <% @letters.each do |letter| %>
+        <li class="btn btn-warning"><%=letter%></li>
+        <% end %>
+    </ol>
     <small id="askquestion" class="form-text text-muted">What is the longest word you can find:</small>
     <input id="textbox" type="text-area" name="answer">
     <input type="submit" value="Submit!" class="btn btn-primary">
